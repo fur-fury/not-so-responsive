@@ -1,0 +1,28 @@
+mixin listmenu(ul_class, li_class)
+	ul(class= ul_class)
+		each a in catlist
+			li(class= li_class): a= a
+
+mixin topbar
+	nav.top-bar(data-topbar='', role='navigation')
+						ul.title-area
+							li.name.active
+								h1
+									a(href='#') My Site
+							li.toggle-topbar.menu-icon
+								a(href='#')
+									span Menu
+						section.top-bar-section
+							ul.left
+								li: a(href='#') Left Nav Button
+								li: a(href='#') Left Nav Button
+								li: a(href='#') Left Nav Button
+
+mixin breadcrumbs(path)
+	ul.breadcrumbs
+		each item in path
+			li: a= item
+
+mixin progress(pc)
+	.round.progress.success
+		span.meter(style='width: #{pc}%')

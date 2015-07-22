@@ -1,0 +1,15 @@
+include jade/variables.jade
+include jade/mixins.jade
+
+doctype html
+html(lang="en")
+	:verbatim
+	include ./jade/head.jade
+	body
+		include blocks/header/header.jade
+		main
+			:verbatim
+			include blocks/promo/promo.jade
+			include blocks/problem/problem.jade
+			include blocks/workflow/workflow.jade
+		//- include blocks/footer/footer.jade
